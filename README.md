@@ -1,7 +1,7 @@
 # Blockshop
 
 Version: 1.0.0
-This README.md will serve to record everything advanced.
+This README.md will work to see all changelogs made to the plugin.
 
 Versions:
     1.0.0:
