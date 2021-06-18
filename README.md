@@ -1,8 +1,7 @@
 # Blockshop
 
 Version: 1.0.0
-This README.md will serve to record everything advanced,
-There will be a section on tags, to ignore.
+This README.md will serve to record everything advanced.
 
 Versions:
     1.0.0:
@@ -11,9 +10,3 @@ Versions:
         - Changeable money.
         - Option to add normal glass or just tinted glass.
     Soon versions: All configurable if the plugin is well accepted.
-
-Ignorad:
-    - settings.yml added
-    - Utils renamed to StringUtils.
-    - Organized main class.
-    - Setup economy system
