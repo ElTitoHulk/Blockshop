@@ -1,0 +1,6 @@
+name: BlockShop
+version: ${project.version}
+main: dev.rena.proyects.BlockShop
+softdepend: [ Vault ]
+authors: [ devRenx ]
+description: I was bored and made this plugin download the src on github find me as devRenx on github
