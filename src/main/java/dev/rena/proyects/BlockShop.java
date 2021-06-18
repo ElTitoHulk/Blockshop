@@ -1,6 +1,7 @@
 package dev.rena.proyects;
 
 import dev.rena.proyects.utils.StringUtils;
+import dev.rena.proyects.utils.file.SettingsFile;
 import lombok.Getter;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
@@ -9,10 +10,19 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class BlockShop extends JavaPlugin {
     @Getter
+    private static SettingsFile settingsFile;
+    @Getter
+    public static BlockShop instance;
+    @Getter
     public static Economy economy = null;
+
     @Override
     public void onEnable() {
         // Plugin startup logic
+
+        settingsFile = new SettingsFile();
+
+        instance = this;
 
         if(Bukkit.getPluginManager().getPlugin("Vault") == null){
             Bukkit.getServer().getPluginManager().disablePlugin(this);
@@ -35,15 +45,15 @@ public final class BlockShop extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        this.getLogger().warning("This plugin has disabled!");
     }
 
-    private boolean setupEconomy()
+    private void setupEconomy()
     {
         RegisteredServiceProvider<Economy> economyProvider = getServer().getServicesManager().getRegistration(Economy.class);
         if (economyProvider != null) {
             economy = economyProvider.getProvider();
         }
-        return (economy != null);
     }
 
 }
